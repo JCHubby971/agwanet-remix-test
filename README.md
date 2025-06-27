@@ -1,40 +1,38 @@
-# Welcome to Remix!
+# AGWANET Remix – Prototype Auth & Documents
 
-- 📖 [Remix docs](https://remix.run/docs)
+Ce projet est un prototype basé sur **Remix** (framework React full-stack) développé dans le cadre du projet AGWANET.
 
-## Development
+## 🔐 Fonctionnalité principale
 
-Run the dev server:
+- Page de **connexion sécurisée** (`/login`)
+- Création de **session via cookie** (token simulé)
+- Accès au **dashboard** uniquement après connexion
+- Route `/documents` protégée
+- Appels à une API Express avec **authentification par token**
 
-```sh
+## 📁 Structure du projet
+
+- `/app/routes/login.jsx` → Formulaire de connexion
+- `/app/routes/dashboard.jsx` → Dashboard protégé
+- `/app/routes/documents.jsx` → Liste documentaire
+- `/app/session.server.js` → Stockage de session cookie sécurisé
+
+## 🚀 Lancer le projet
+
+```bash
+npm install
 npm run dev
-```
 
-## Deployment
+Accès : http://localhost:5173
 
-First, build your app for production:
+🔗 API connectée
+Ce projet se connecte à une API Express externe :
+👉 Voir le dépôt API ici : https://github.com/JCHubby971/api-server
 
-```sh
-npm run build
-```
+💡 À venir
 
-Then run the app in production mode:
+- Authentification JWT réelle
 
-```sh
-npm start
-```
+- Prévisualisation PDF
 
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+- Dashboard client avec KPIs

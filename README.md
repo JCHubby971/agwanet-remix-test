@@ -22,9 +22,9 @@ Ce projet est un prototype basé sur **Remix** (framework React full-stack) dév
 ```bash
 npm install
 npm run dev
-
-Accès : http://localhost:5173
 ```
+Accès : http://localhost:5173
+
 🔗 API connectée
 Ce projet se connecte à une API Express externe :
 👉 Voir le dépôt API ici : https://github.com/JCHubby971/api-server
